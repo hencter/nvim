@@ -54,21 +54,30 @@ return packer.startup(function(use)
     -- Mason config
     {"williamboman/mason-lspconfig.nvim"},
     -- null-ls
-    {"jose-elias-alvarez/null-ls.nvim"},
+    -- TODO {"jose-elias-alvarez/null-ls.nvim"},
   }
 
   --|代码补全|--
   use {
-    -- {'hrsh7th/nvim-cmp'},
-    -- {'hrsh7th/cmp-nvim-lsp'},
-    -- {'hrsh7th/cmp-buffer'},
-    -- {'hrsh7th/cmp-path'},
-    -- {'hrsh7th/cmp-cmdline'},
-    -- luasnip
-    -- {"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"},
-    -- {'saadparwaiz1/cmp_luasnip'},
+    -- cmp
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'hrsh7th/cmp-cmdline'},
+    {'hrsh7th/cmp-nvim-lua'},
+    -- snippet 引擎
+    {"L3MON4D3/LuaSnip", tag = "v1.*"},
+    {'saadparwaiz1/cmp_luasnip'},
+    -- 依赖管理
+    {'David-Kunz/cmp-npm'},
+    {'hrsh7th/cmp-emoji'},
+    -- requires
+    {"nvim-lua/plenary.nvim"},
   }
 
+  --|语法|--
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   --|调试|--
   use {'mfussenegger/nvim-dap'}
@@ -94,7 +103,7 @@ return packer.startup(function(use)
   }
 
   --|Colorscheme|--
-  use {"rebelot/kanagawa.nvim"}
+  use {"EdenEast/nightfox.nvim", tag = "v1.0.0"}
   ---------------------------------|结束|--------------------------------------
   -----------------------------------------------------------------------------
 
