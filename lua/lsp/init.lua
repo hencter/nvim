@@ -8,6 +8,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "sumneko_lua",
     "prosemd_lsp",
+    "volar",
   },
   automatic_installation = true,
 })
@@ -32,6 +33,11 @@ require'lspconfig'.sumneko_lua.setup{
 
 -- Markdown
 require'lspconfig'.prosemd_lsp.setup{
+  capabilities = capabilities,
+}
+
+-- Vue
+require'lspconfig'.volar.setup{
   capabilities = capabilities,
 }
 

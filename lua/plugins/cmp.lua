@@ -33,9 +33,23 @@ cmp.setup({
     { name = 'npm', keyword_length = 4 },
     -- { name = 'calc' },
     -- { name = 'cmp_git' },
-  }, {
-    { name = 'buffer' },
   },
 
 })
 
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+-- 命令模式补全
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = 'path' },
+    { name = 'cmdline' },
+  }
+})
+
+-- Completions for / search based on current buffer:
+-- 搜索补全
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})

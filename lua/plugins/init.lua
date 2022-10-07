@@ -4,7 +4,23 @@
 
 local packer = require('packer')
 
---|Packer 自定义初始化|--
+--|首次启动安装 Packer|--
+-------------------------
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    print "安装 packer 中，请关闭并重新打开 Neovim"
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
+--|Packer 自定义配置|--
 -------------------------
 packer.init({
   -- 使用 SSH 的方式连接 Github 服务器以提升克隆速度
@@ -22,22 +38,6 @@ packer.init({
   }
 })
 
---|首次加载 Packer|--
----------------------
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
-end
-
---|首次初始化 Packer|--
-local packer_bootstrap = ensure_packer()
-
 return packer.startup(function(use)
   -----------------------------------------------------------------------------
   ---------------------------------|开始|--------------------------------------
@@ -45,6 +45,8 @@ return packer.startup(function(use)
   --|包管理器|--
   use {'wbthomason/packer.nvim'}
 
+  -- requires
+  use {"nvim-lua/plenary.nvim"}
   --|LSP|--
   use {
     -- 官方 LSP 配置
@@ -72,9 +74,11 @@ return packer.startup(function(use)
     -- 依赖管理
     {'David-Kunz/cmp-npm'},
     {'hrsh7th/cmp-emoji'},
-    -- requires
-    {"nvim-lua/plenary.nvim"},
   }
+
+  --|代码格式化|--
+    -- 缩进
+  use {'lukas-reineke/indent-blankline.nvim'}
 
   --|语法|--
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -86,20 +90,24 @@ return packer.startup(function(use)
   use {
     -- Markdown/(LaTex)
     {"ellisonleao/glow.nvim"},
-    -- 模糊查找器
-    -- TODO {"vijaymarupudi/nvim-fzf"},			
+    -- 模糊查找
+    {'nvim-telescope/telescope.nvim', tag = '0.1.0'},
     -- 翻译
     {"potamides/pantran.nvim"},
     -- 图标
     {'kyazdani42/nvim-web-devicons'},
     -- 文件管理器
     {'kyazdani42/nvim-tree.lua', tag = 'nightly'},
+    -- 项目管理器
+    {"ahmedkhalf/project.nvim"},
     -- 标签栏
     {'akinsho/bufferline.nvim', tag = "v2.*"},
     -- 状态栏
     {'nvim-lualine/lualine.nvim'},
-    -- 开始
-    -- TODO use {'glepnir/dashboard-nvim'}
+    -- 开始页
+    {'goolord/alpha-nvim'},
+    -- 媒体
+    {'ekickx/clipboard-image.nvim'},
   }
 
   --|Colorscheme|--

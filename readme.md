@@ -20,3 +20,5 @@ git clone git@github.com:hencter/nvim.git ~/.config/nvim
 
 [`:checkhealth`]("https://neovim.io/doc/user/pi_health.html#:checkhealth")
 
+
+

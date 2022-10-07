@@ -79,10 +79,20 @@ _G.packer_plugins = {
     path = "/home/hencter/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "git@github.com:L3MON4D3/LuaSnip"
   },
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/home/hencter/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "git@github.com:goolord/alpha-nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/hencter/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "git@github.com:akinsho/bufferline.nvim"
+  },
+  ["clipboard-image.nvim"] = {
+    loaded = true,
+    path = "/home/hencter/.local/share/nvim/site/pack/packer/start/clipboard-image.nvim",
+    url = "git@github.com:ekickx/clipboard-image.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -128,6 +138,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hencter/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "git@github.com:ellisonleao/glow.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/hencter/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "git@github.com:lukas-reineke/indent-blankline.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -193,6 +208,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hencter/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "git@github.com:nvim-lua/plenary.nvim"
+  },
+  ["project.nvim"] = {
+    loaded = true,
+    path = "/home/hencter/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "git@github.com:ahmedkhalf/project.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/hencter/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "git@github.com:nvim-telescope/telescope.nvim"
   }
 }
 

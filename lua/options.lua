@@ -12,8 +12,10 @@ opt.ignorecase = true
 opt.smartcase = true
 -- 智能缩进
 opt.smartindent = true
--- 制表符长度
+-- 2 格缩进
 opt.shiftwidth = 2
+-- 制表符宽度
+opt.tabstop = 2
 -- 允许 Neovim 访问系统剪切板
 opt.cb = "unnamedplus"
 -- 允许在 Neovim 中使用鼠标
@@ -21,10 +23,9 @@ opt.mouse = "a"
 -- 禁用换行
 opt.wrap = false
 
--- 一般不开
--- 替换制表符为 2 个空格
--- opt.tabstop = 2
+opt.list = true
+-- 将空格显示为 `⋅` 符号
+opt.listchars:append "space:⋅"
 
-opt.termguicolors = true
 
 
