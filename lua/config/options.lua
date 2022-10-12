@@ -27,5 +27,6 @@ opt.list = true
 -- 将空格显示为 `⋅` 符号
 opt.listchars:append "space:⋅"
 
-
+-- 创建交换文件
+opt.swapfile = false
 
