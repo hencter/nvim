@@ -1,5 +1,5 @@
 --------------
---|插件管理|-- 
+--|插件管理|--
 --------------
 
 local packer = require('packer')
@@ -77,7 +77,7 @@ return packer.startup(function(use)
   }
 
   --|代码格式化|--
-    -- 缩进
+  -- 缩进
   use {'lukas-reineke/indent-blankline.nvim'}
 
   --|语法|--
@@ -85,6 +85,12 @@ return packer.startup(function(use)
 
   --|调试|--
   use {'mfussenegger/nvim-dap'}
+
+	--|Code Runner|--
+	use {"akinsho/toggleterm.nvim", tag = '*'}
+
+	-- Git
+	use {'lewis6991/gitsigns.nvim'}
 
   --|工具|--
   use {

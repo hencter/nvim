@@ -54,3 +54,7 @@ cmp.setup.cmdline('/', {
     { name = 'buffer' }
   }
 })
+
+-- 需要单独注册的 cmp 插件配置
+require('cmp-npm').setup{}
+
