@@ -1,5 +1,6 @@
 " Neovim Initialization "
-" 
+" Author: Hencter Liu
+" Blog: https://hencter.top
 " ===================== "
 
 lua require'config'

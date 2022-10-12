@@ -1,18 +1,20 @@
 -- 插件配置 --
---------------
 
---|代码补全|--
+--|代码|--
+-- 自动补全
 require'plugins.cmp'
-require('cmp-npm').setup{}
-
---|格式化|--
---缩进
+-- 缩进
 require'plugins.indent'
---|语法|--
+-- 语法
 require'plugins.treesitter'
+-- Code Runner
+-- require'plugins.toggletermu'
+-- Git
+-- TODOrequire('gitsigns').setup()
+
 
 --|工具|--
--- Markdown 预览
+-- 使用 Glow 预览 Makrdown 文件
 require('glow').setup{}
 -- 模糊查询
 require'plugins.telescope'
@@ -29,4 +31,3 @@ require("lualine").setup({})
 -- 开始页
 require'plugins.alpha'
 -- 媒体
-require'plugins.clipboard-image'
