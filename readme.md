@@ -21,4 +21,12 @@ git clone git@github.com:hencter/nvim.git ~/.config/nvim
 [`:checkhealth`]("https://neovim.io/doc/user/pi_health.html#:checkhealth")
 
 
+## 插件
+
+
+## 参考资料
+- https://github.com/nanotee/nvim-lua-guide
+- https://github.com/glepnir/nvim-lua-guide-zh
+- https://github.com/rockerBOO/awesome-neovim
+
 
