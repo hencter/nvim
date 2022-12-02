@@ -81,16 +81,16 @@ return packer.startup(function(use)
   use {'lukas-reineke/indent-blankline.nvim'}
 
   --|语法|--
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   --|调试|--
-  use {'mfussenegger/nvim-dap'}
+  -- use {'mfussenegger/nvim-dap'}
 
 	--|Code Runner|--
-	use {"akinsho/toggleterm.nvim", tag = '*'}
+	-- use {"akinsho/toggleterm.nvim", tag = '*'}
 
 	-- Git
-	use {'lewis6991/gitsigns.nvim'}
+	-- use {'lewis6991/gitsigns.nvim'}
 
   --|工具|--
   use {
@@ -117,7 +117,7 @@ return packer.startup(function(use)
   }
 
   --|Colorscheme|--
-  use {"EdenEast/nightfox.nvim", tag = "v1.0.0"}
+  -- use {"EdenEast/nightfox.nvim", tag = "v1.0.0"}
   ---------------------------------|结束|--------------------------------------
   -----------------------------------------------------------------------------
 

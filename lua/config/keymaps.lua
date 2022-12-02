@@ -32,7 +32,7 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- 标签页管理
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<S-q>", "<cmd>bdelete!<CR>", opts)
+keymap("n", "<S-w>", "<cmd>bdelete!<CR>", opts)
 
 -- 清除搜索高亮 
 keymap("n", "<Space>h", "<cmd>nohlsearch<CR>", opts)

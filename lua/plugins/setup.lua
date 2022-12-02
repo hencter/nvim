@@ -4,9 +4,9 @@
 -- 自动补全
 require'plugins.cmp'
 -- 缩进
-require'plugins.indent'
+-- require'plugins.indent'
 -- 语法
-require'plugins.treesitter'
+-- require'plugins.treesitter'
 -- Code Runner
 -- require'plugins.toggletermu'
 -- Git
@@ -31,3 +31,4 @@ require("lualine").setup({})
 -- 开始页
 require'plugins.alpha'
 -- 媒体
+
