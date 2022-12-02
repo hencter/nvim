@@ -5,4 +5,5 @@
 require'config' -- config/init.lua
 require'plugins' -- plugins/init.lua
 require'plugins.setup' -- plugins/setup.lua
--- require'lsp'
+require'lsp'
+

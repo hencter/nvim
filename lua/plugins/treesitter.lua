@@ -1,6 +1,19 @@
---|  An incremental parsing system for programming tools
+-- An incremental parsing system for programming tools
+-- 一个用于编程工具的增量解析系统
 
-require'nvim-treesitter.configs'.setup {
+local status_ok, treesitter = pcall(require, "nvim-treesitter")
+if not status_ok then
+	vim.notify("note found nvim-treesitter")
+	return
+end
+
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+	vim.notify("configs error")
+	return
+end
+
+configs.setup {
   -- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
   ensure_installed = {

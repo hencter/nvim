@@ -12,6 +12,7 @@ dashboard.section.header.val = {
   [[ \__,_|   | \__,_| _ ]],
   [[          |_|     )_)]],
 }
+
 dashboard.section.buttons.val = {
   dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
   dashboard.button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
@@ -22,7 +23,7 @@ dashboard.section.buttons.val = {
   dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 }
 
-dashboard.section.footer.val = "hencter.top"
+dashboard.section.footer.val = "hencter.top or hencte.top"
 
 dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"

@@ -1,21 +1,20 @@
---------------
---|插件管理|--
---------------
+-- 插件管理
 
-local packer = require('packer')
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
 
---|首次启动安装 Packer|--
+-- 首次启动安装 Packer
 -------------------------
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    print "安装 packer 中，请关闭并重新打开 Neovim"
+    vim.notify("安装 packer 中，请关闭并重新打开 Neovim")
     vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+    return true end return false
 end
 
 local packer_bootstrap = ensure_packer()
@@ -32,7 +31,7 @@ packer.init({
   display = {
     open_fn = function()
       return require('packer.util').float {
-	border = 'rounded'
+				border = 'rounded'
       }
     end,
   }
@@ -56,10 +55,10 @@ return packer.startup(function(use)
     -- Mason config
     {"williamboman/mason-lspconfig.nvim"},
     -- null-ls
-    -- TODO {"jose-elias-alvarez/null-ls.nvim"},
+    {"jose-elias-alvarez/null-ls.nvim"},
   }
 
-  --|代码补全|--
+  -- 代码补全
   use {
     -- cmp
     {'hrsh7th/nvim-cmp'},
@@ -76,12 +75,15 @@ return packer.startup(function(use)
     {'hrsh7th/cmp-emoji'},
   }
 
-  --|代码格式化|--
+  -- 代码格式化
   -- 缩进
   use {'lukas-reineke/indent-blankline.nvim'}
 
   --|语法|--
-  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+	-- 注释
+	use { 'numToStr/Comment.nvim' }
 
   --|调试|--
   -- use {'mfussenegger/nvim-dap'}
@@ -114,10 +116,15 @@ return packer.startup(function(use)
     {'goolord/alpha-nvim'},
     -- 媒体
     {'ekickx/clipboard-image.nvim'},
+
+		-- 终端
+		use {"akinsho/toggleterm.nvim", tag = '*'}
   }
 
   --|Colorscheme|--
-  -- use {"EdenEast/nightfox.nvim", tag = "v1.0.0"}
+	use {'folke/tokyonight.nvim' }
+  use {"EdenEast/nightfox.nvim", tag = "v1.0.0"}
+	use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
   ---------------------------------|结束|--------------------------------------
   -----------------------------------------------------------------------------
 
