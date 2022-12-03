@@ -40,6 +40,7 @@ sudo pacman -S extra/xclip
 - <https://github.com/nanotee/nvim-lua-guide>
 - <https://github.com/glepnir/nvim-lua-guide-zh>
 - <https://github.com/rockerBOO/awesome-neovim>
+- <https://github.com/LunarVim/nvim-basic-ide>
 
 ## 展示
 
