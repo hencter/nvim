@@ -1,19 +1,19 @@
 -- Mason config
 
 local servers = {
-  "sumneko_lua",
-  "prosemd_lsp",
-  "volar",
+	-- LSP --
+	"sumneko_lua",
+	"prosemd_lsp",
+	"volar",
 }
-
 
 local settings = {
 	ui = {
 		border = "none",
 		icons = {
-			package_installed = "◍",
-			package_pending = "◍",
-			package_uninstalled = "◍",
+			package_installed = "﫠",
+			package_pending = "",
+			package_uninstalled = "",
 		},
 	},
 	log_level = vim.log.levels.INFO,

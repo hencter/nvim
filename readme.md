@@ -5,7 +5,7 @@
 ```sh
 git clone https://github.com/neovim/neovim.git
 cd neovim
-git checkout release-0.7
+git checkout release-0.8
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 ```
@@ -20,10 +20,17 @@ git clone git@github.com:hencter/nvim.git ~/.config/nvim
 
 [`:checkhealth`]("https://neovim.io/doc/user/pi_health.html#:checkhealth")
 
-### 基本包
+### 一些依赖
 
-```sh
-sudo pacman -S xclip
+==补充==
+
+如果你像我一样使用 Arch Linux 请提前安装 Packer, 当然它在 ArchLinux CN 源
+
+```bash
+# 包管理器,虽然可以里面有脚本可以安装,但是提前安装可以加快安装插件进度
+sudo pacman -S archlinuxcn/nvim-packer-git
+# 剪贴内容到系统剪贴板
+sudo pacman -S extra/xclip
 ```
 
 ## 插件
@@ -34,11 +41,6 @@ sudo pacman -S xclip
 - <https://github.com/glepnir/nvim-lua-guide-zh>
 - <https://github.com/rockerBOO/awesome-neovim>
 
-## 补充
+## 展示
 
-如果你像我一样使用 Arch Linux 请提前安装 Packer, 当然它在 ArchLinux CN 源
-
-```sh
-sudo pacman -S archlinuxcn/nvim-packer-git
-```
-
+![alpha](img/2022-12-03-11-25-48.png)

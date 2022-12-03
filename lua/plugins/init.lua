@@ -5,8 +5,7 @@ if not status_ok then
   return
 end
 
--- 首次启动安装 Packer
--------------------------
+-- 首次启动安装 Packer -----------------------
 local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -19,8 +18,16 @@ end
 
 local packer_bootstrap = ensure_packer()
 
---|Packer 自定义配置|--
--------------------------
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost init.lua source <afile> | PackerSync
+--   augroup end
+-- ]]
+
+
+-- Packer 自定义配置
 packer.init({
   -- 使用 SSH 的方式连接 Github 服务器以提升克隆速度
   git = {
@@ -38,7 +45,7 @@ packer.init({
 })
 
 return packer.startup(function(use)
-  -----------------------------------------------------------------------------
+
   ---------------------------------|开始|--------------------------------------
 
   --|包管理器|--
@@ -46,7 +53,7 @@ return packer.startup(function(use)
 
   -- requires
   use {"nvim-lua/plenary.nvim"}
-  --|LSP|--
+  -- LSP
   use {
     -- 官方 LSP 配置
     {'neovim/nvim-lspconfig'},
@@ -55,7 +62,7 @@ return packer.startup(function(use)
     -- Mason config
     {"williamboman/mason-lspconfig.nvim"},
     -- null-ls
-    {"jose-elias-alvarez/null-ls.nvim"},
+		{"jose-elias-alvarez/null-ls.nvim"},
   }
 
   -- 代码补全
@@ -70,10 +77,13 @@ return packer.startup(function(use)
     -- snippet 引擎
     {"L3MON4D3/LuaSnip", tag = "v1.*"},
     {'saadparwaiz1/cmp_luasnip'},
+		{'rafamadriz/friendly-snippets'},
     -- 依赖管理
     {'David-Kunz/cmp-npm'},
     {'hrsh7th/cmp-emoji'},
   }
+
+	use { "windwp/nvim-autopairs" }
 
   -- 代码格式化
   -- 缩进
@@ -92,11 +102,11 @@ return packer.startup(function(use)
 	-- use {"akinsho/toggleterm.nvim", tag = '*'}
 
 	-- Git
-	-- use {'lewis6991/gitsigns.nvim'}
+	use {'lewis6991/gitsigns.nvim'}
 
-  --|工具|--
+  -- 工具
   use {
-    -- Markdown/(LaTex)
+    -- Markdown & LaTex
     {"ellisonleao/glow.nvim"},
     -- 模糊查找
     {'nvim-telescope/telescope.nvim', tag = '0.1.0'},
@@ -104,8 +114,8 @@ return packer.startup(function(use)
     {"potamides/pantran.nvim"},
     -- 图标
     {'kyazdani42/nvim-web-devicons'},
-    -- 文件管理器
-    {'kyazdani42/nvim-tree.lua', tag = 'nightly'},
+		-- 文件导航
+    {'kyazdani42/nvim-tree.lua'},
     -- 项目管理器
     {"ahmedkhalf/project.nvim"},
     -- 标签栏
@@ -114,19 +124,19 @@ return packer.startup(function(use)
     {'nvim-lualine/lualine.nvim'},
     -- 开始页
     {'goolord/alpha-nvim'},
-    -- 媒体
+    -- 图像
     {'ekickx/clipboard-image.nvim'},
-
+		{'samodostal/image.nvim'},
+		{'m00qek/baleia.nvim', tag = 'v1.2.0'},
 		-- 终端
-		use {"akinsho/toggleterm.nvim", tag = '*'}
+		{"akinsho/toggleterm.nvim", tag = '*'}
   }
 
-  --|Colorscheme|--
+  -- Colorscheme 主题颜色
 	use {'folke/tokyonight.nvim' }
   use {"EdenEast/nightfox.nvim", tag = "v1.0.0"}
 	use {'shaunsingh/oxocarbon.nvim', run = './install.sh'}
   ---------------------------------|结束|--------------------------------------
-  -----------------------------------------------------------------------------
 
   -- Packer 初始化引导
   if packer_bootstrap then

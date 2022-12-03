@@ -29,5 +29,3 @@ opt.list = true
 
 -- 创建交换文件
 opt.swapfile = false
-
-

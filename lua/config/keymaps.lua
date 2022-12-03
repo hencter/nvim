@@ -33,7 +33,7 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-q>", "<cmd>bdelete!<CR>", opts) -- <S-w> 容易误触
 
--- 清除搜索高亮 
+-- 清除搜索高亮
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- 插入·Insert --
@@ -45,7 +45,6 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
-
 -- 插件快捷键 --
 ----------------
 -- NvimTree
@@ -56,7 +55,6 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
-
 
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)

@@ -1,4 +1,4 @@
-local colorscheme = "tokyonight"
+local colorscheme = "tokyonight-moon"
 
 -- tokyonight
 -- nightfox

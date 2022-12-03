@@ -4,17 +4,21 @@
 -- 自动补全
 require'plugins.cmp'
 -- 缩进
--- require'plugins.indent'
+require'plugins.indent'
 -- 语法
 require'plugins.treesitter'
--- Code Runner
--- require'plugins.toggletermu'
 -- Git
--- TODOrequire('gitsigns').setup()
+require'plugins.gitsigns'
+-- Autopairs
+require'plugins.autopairs'
+-- Code Runner
+-- 终端
+require'plugins.toggleterm'
+
 
 --|工具|--
 -- 使用 Glow 预览 Makrdown 文件
--- require('glow').setup{}
+require('glow').setup{}
 -- 模糊查询
 require'plugins.telescope'
 -- 图标
@@ -26,13 +30,12 @@ require'plugins.project'
 -- 标签栏
 require("bufferline").setup{}
 -- 状态栏
-require("lualine").setup({})
+require("lualine").setup{}
 -- 开始页
 require'plugins.alpha'
--- 媒体
+-- TODO 显示图片
+-- require'plugins.image'
 
--- Terminal Integration
-require'toggleterm'
-
--- 主题
+-- 主题配置
 require'plugins.colorscheme'
+
