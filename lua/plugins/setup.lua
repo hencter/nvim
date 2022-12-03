@@ -9,11 +9,13 @@ require'plugins.indent'
 require'plugins.treesitter'
 -- Git
 require'plugins.gitsigns'
--- Autopairs
+-- 自动配对
 require'plugins.autopairs'
 -- Code Runner
 -- 终端
 require'plugins.toggleterm'
+-- Debugging
+require'plugins.dap'
 
 
 --|工具|--
