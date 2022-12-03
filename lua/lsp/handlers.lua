@@ -14,7 +14,7 @@ M.setup = function()
 
 		{ name = "DiagnosticSignError", text = "" },-- 错误
 		{ name = "DiagnosticSignWarn", text = "" }, -- 警告
-		{ name = "DiagnosticSignHint", text = "" }, -- 提示
+		{ name = "DiagnosticSignHint", text = "" }, -- 示意:一般出现于变量或者函数/方法未使用
 		{ name = "DiagnosticSignInfo", text = "" }, -- 信息
 	}
 
