@@ -2,42 +2,40 @@
 
 --|代码|--
 -- 自动补全
-require'plugins.cmp'
+require("plugins.cmp")
 -- 缩进
-require'plugins.indent'
+require("plugins.indent")
 -- 语法
-require'plugins.treesitter'
+require("plugins.treesitter")
 -- Git
-require'plugins.gitsigns'
+require("plugins.gitsigns")
 -- 自动配对
-require'plugins.autopairs'
+require("plugins.autopairs")
 -- Code Runner
 -- 终端
-require'plugins.toggleterm'
+require("plugins.toggleterm")
 -- Debugging
-require'plugins.dap'
-
+require("plugins.dap")
 
 --|工具|--
 -- 使用 Glow 预览 Makrdown 文件
-require('glow').setup{}
+require("glow").setup({})
 -- 模糊查询
-require'plugins.telescope'
+require("plugins.telescope")
 -- 图标
-require'nvim-web-devicons'.setup{}
+require("nvim-web-devicons").setup({})
 -- 文件管理器
-require "plugins.nvim-tree"
+require("plugins.nvim-tree")
 -- 项目管理
-require'plugins.project'
+require("plugins.project")
 -- 标签栏
-require("bufferline").setup{}
+require("bufferline").setup({})
 -- 状态栏
-require("lualine").setup{}
+require("plugins.lualine")
 -- 开始页
-require'plugins.alpha'
+require("plugins.alpha")
 -- TODO 显示图片
 -- require'plugins.image'
 
 -- 主题配置
-require'plugins.colorscheme'
-
+require("plugins.colorscheme")
