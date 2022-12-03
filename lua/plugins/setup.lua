@@ -34,8 +34,10 @@ require("bufferline").setup({})
 require("plugins.lualine")
 -- 开始页
 require("plugins.alpha")
--- TODO 显示图片
--- require'plugins.image'
+
+--|Bars and Lines|--
+-- Cursorline
+require("plugins.illuminate")
 
 -- 主题配置
 require("plugins.colorscheme")

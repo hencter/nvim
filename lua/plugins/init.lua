@@ -136,6 +136,8 @@ return packer.startup(function(use)
 		{ "akinsho/toggleterm.nvim", tag = "*" },
 	})
 
+	use({ "RRethy/vim-illuminate" })
+
 	-- Colorscheme 主题颜色
 	use({ "folke/tokyonight.nvim" })
 	use({ "EdenEast/nightfox.nvim", tag = "v1.0.0" })
