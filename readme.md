@@ -31,6 +31,8 @@ git clone git@github.com:hencter/nvim.git ~/.config/nvim
 sudo pacman -S archlinuxcn/nvim-packer-git
 # 剪贴内容到系统剪贴板
 sudo pacman -S extra/xclip
+# Lazygit 非常的好用,谁用谁知道, 本配置调出方法: `<leader>g`
+sudo pacman -S community/lazygit
 ```
 
 ## 插件
