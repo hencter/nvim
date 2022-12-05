@@ -1,0 +1,8 @@
+:root {
+	--var-test: red;
+	--var-color: #fff;
+}
+
+html,body {
+	text-align: center;
+}

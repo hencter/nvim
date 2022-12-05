@@ -1,6 +1,7 @@
----
-title: "Markdown test"
----
++++
+title = "Markdown test"
+date = "2022-12-03T"
++++
 
 
 ## Title
@@ -17,4 +18,10 @@ title: "Markdown test"
 ##### H6
 
 ###### H7
+```
+
+## CodeBlock
+
+```javascript
+console.log("hello world!")
 ```
