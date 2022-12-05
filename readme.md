@@ -43,6 +43,7 @@ sudo pacman -S community/lazygit
 - <https://github.com/glepnir/nvim-lua-guide-zh>
 - <https://github.com/rockerBOO/awesome-neovim>
 - <https://github.com/LunarVim/nvim-basic-ide>
+- <http://neovimcraft.com/>
 
 ## 展示
 
