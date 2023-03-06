@@ -1,3 +1,8 @@
+--
+-- .config/nvim/init.lua
+--
+
+
 -- Project: Neovim initialization
 -- Author: Hencte Liu
 -- Blog: https://hencter.top
